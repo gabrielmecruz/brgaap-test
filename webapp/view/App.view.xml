@@ -1,0 +1,10 @@
+<mvc:View
+	controllerName="brgaap-test.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	height="100%"
+	displayBlock="true">
+	<Shell appWidthLimited="false">
+		<App class="app-brgaap" id="app" />
+	</Shell>
+</mvc:View>

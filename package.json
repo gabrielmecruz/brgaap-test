@@ -1,0 +1,13 @@
+{
+  "name": "brgaap-test-invoices-list",
+  "version": "1.0.0",
+  "author": "SAP SE",
+  "description": "BR GAAP Test: Invoices list",
+  "scripts": {
+    "start": "ui5 serve",
+    "build": "ui5 build"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3"
+  }
+}

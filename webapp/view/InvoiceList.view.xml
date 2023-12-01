@@ -1,0 +1,88 @@
+
+<mvc:View
+  controllerName="brgaap-test.controller.InvoiceList"
+  xmlns="sap.m"
+  xmlns:f="sap.f"
+  xmlns:mvc="sap.ui.core.mvc">
+  <Panel
+    id="list-panel">
+    <HBox direction="Column">
+      <Toolbar width="100%" >
+        <SearchField 
+          width="92%"
+          liveChange=".onSearch"
+        />
+        <MenuButton icon="sap-icon://sort">
+          <menu>
+            <Menu>
+              <MenuItem text="Status" press=".onSort('completed')"/>
+              <MenuItem text="Nome" press=".onSort('title')" />
+            </Menu>
+          </menu>
+        </MenuButton>
+      </Toolbar>
+      <Toolbar height="120px">
+        <Image src="logo.png" alt="Logo" />
+      </Toolbar>
+    </HBox>
+    <VBox fitContainer="true">
+      <Table
+        id="invoice-list"
+        width="100%"
+        growing="true"
+        growingScrollToLoad="true"
+        growingThreshold="200"
+        items="{
+          path: 'invoice>/',
+          sorter: {
+            path: 'userId',
+            group: false
+          }
+        }">
+        <columns>
+          <Column
+            importance="High"
+            minScreenWidth="Tablet"
+            hAlign="Begin">
+            <Text id="table-name" text="Nome"/>
+          </Column>
+          <Column
+            importance="Low"
+            demandPopin="true"
+            minScreenWidth="Tablet"
+            hAlign="Center"
+            width="20%">
+            <Text text="Completado"/>
+          </Column>
+          <Column
+            importance="Low"
+            demandPopin="true"
+            minScreenWidth="Tablet"
+            hAlign="Center"
+            width="20%">			
+            <Text text="Detalhes"/>
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem
+            type="Inactive">
+            <cells>
+              <ObjectListItem title="{invoice>title}"></ObjectListItem>
+              <CheckBox
+                displayOnly="false"
+                activeHandling="true"
+                select="onCompleted"
+                selected="{invoice>completed}"
+              />
+              <Button
+                icon ="sap-icon://detail-view"
+                press=".onPress"
+                width="100%"
+              />
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </VBox>
+  </Panel>
+</mvc:View>

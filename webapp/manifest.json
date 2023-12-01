@@ -1,0 +1,110 @@
+{
+  "_version": "1.59.0",
+	"sap.app": {
+    "id": "brgaap-test",
+    "type": "application",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"i18n": {
+			"bundleUrl": "i18n/i18n.properties",
+      "supportedLocales": [
+				""
+			],
+			"fallbackLocale": ""
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+    "dataSources": {
+			"invoiceAPI": {
+				"uri": "https://jsonplaceholder.typicode.com/todos",
+				"type": "JSON" 
+			}
+		}
+	},
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "brgaap-test.view.App",
+			"type": "XML",
+      "id": "app",
+			"async": true
+		},
+		"dependencies": {
+      "minUI5Version": "1.98.0",
+			"libs": {
+				"sap.m": {},
+				"sap.ui.core": {},
+				"sap.ui.layout": {}
+			}
+		},
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "invoice": {
+        "dataSource": "invoiceAPI"			
+      },
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "brgaap-test.i18n.i18n",
+          "supportedLocales": [
+						""
+					],
+          "fallbackLocale": ""
+				}
+			}
+		},
+    "routing": {
+      "config": {
+			  "routerClass": "sap.m.routing.Router",
+        "type": "View",
+        "viewType": "XML",
+        "path": "brgaap-test.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+      "routes":[
+        {
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
+        },
+        {
+          "pattern": "detail/{invoiceData}",
+          "name": "detail",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+        "overview": {
+          "id": "overview",
+          "name": "Overview",
+          "transition": "slide"
+        },
+        "detail": {
+          "id": "detail",
+          "name": "Detail",
+          "transition": "slide"
+        }
+      }
+
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    }
+	}
+}

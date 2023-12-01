@@ -1,0 +1,46 @@
+.sapShellCentralBox{
+  width: 100%;
+}
+
+.sapMTBNewFlex {
+  justify-content: space-between !important;
+}
+
+.sapMTBStandard {
+  border: none;
+}
+
+.sapFDynamicPageContent, .sapFDynamicPageContentFitContainer{
+  padding: 0 !important;
+}
+
+.sapMList {
+  width: auto !important;
+}
+
+.sapMSplitContainerHideMode>.sapMSplitContainerDetail .sapUiResponsiveMargin, .sapUiResponsiveMargin{
+  margin: 0;
+}
+
+.sapFDynamicPageHeaderPinButton  {
+  display: none;
+}
+
+.sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarLeft, .sapUiSizeCompact .sapMPageFooter .sapMIBar .sapMBarLeft, .sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarRight, .sapUiSizeCompact .sapMPageFooter .sapMIBar .sapMBarRight, .sapUiSizeCompact .sapMPageHeader .sapMIBar .sapMBarPH, .sapUiSizeCompact .sapMPageFooter .sapMIBar .sapMBarPH {
+  height: 2.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.sap-ui-body {
+  color: #47729f;
+}
+
+.sapMTextLineClamp {
+  font-size: 1rem;
+  color:  #32363a;
+}
+
+.sapMColumnHeader .sapMText {
+  font-weight: 600;
+}
