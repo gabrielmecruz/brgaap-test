@@ -3,17 +3,17 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">
   <Page 
-    title="Detalhes da nota fiscal #{invoice>id}"
+    title="{i18n>detailPageTitle} #{invoice>id}"
     showNavButton="true"
     navButtonPress=".onBack">
     <Panel id="detail-panel">
     <ObjectHeader
       fullScreenOptimized="true"
       responsive="true"
-      title="Nota Fiscal #{invoice>id}"
-      intro="Nome: {invoice>title}">
-        <ObjectAttribute title="User ID" text="{invoice>userId}"/>
-        <ObjectAttribute title="Completado" text="{= ${invoice>completed} === true ? 'Sim' : 'Não' }"/>
+      title="{i18n>detailHeaderTitle} #{invoice>id}"
+      intro="{i18n>detailIntro}: {invoice>title}">
+        <ObjectAttribute title="{i18n>detailUserId}" text="{invoice>userId}"/>
+        <ObjectAttribute title="{i18n>detailCompleted}" text="{= ${invoice>completed} === true ? 'Sim' : 'Não' }"/>
     </ObjectHeader>
     </Panel>
   </Page>

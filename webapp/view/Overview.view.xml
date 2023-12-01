@@ -3,7 +3,7 @@
   xmlns="sap.m"
   xmlns:core="sap.ui.core"
   xmlns:mvc="sap.ui.core.mvc">
-  <Page id="page" title="BR GAAP Test - Invoices List">
+  <Page id="page" title="{i18n>pageTitle}">
     <content>
       <mvc:XMLView viewName="brgaap-test.view.InvoiceList"/>
     </content>

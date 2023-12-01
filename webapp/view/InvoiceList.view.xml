@@ -15,8 +15,8 @@
         <MenuButton icon="sap-icon://sort">
           <menu>
             <Menu>
-              <MenuItem text="Status" press=".onSort('completed')"/>
-              <MenuItem text="Nome" press=".onSort('title')" />
+              <MenuItem text="{i18n>filterStatus}" press=".onSort('completed')"/>
+              <MenuItem text="{i18n>filterName}" press=".onSort('title')" />
             </Menu>
           </menu>
         </MenuButton>
@@ -44,7 +44,7 @@
             importance="High"
             minScreenWidth="Tablet"
             hAlign="Begin">
-            <Text id="table-name" text="Nome"/>
+            <Text id="table-name" text="{i18n>listTitleName}"/>
           </Column>
           <Column
             importance="Low"
@@ -52,7 +52,7 @@
             minScreenWidth="Tablet"
             hAlign="Center"
             width="20%">
-            <Text text="Completado"/>
+            <Text text="{i18n>listTitleCompleted}"/>
           </Column>
           <Column
             importance="Low"
@@ -60,7 +60,7 @@
             minScreenWidth="Tablet"
             hAlign="Center"
             width="20%">			
-            <Text text="Detalhes"/>
+            <Text text="{i18n>listTitleDetail}"/>
           </Column>
         </columns>
         <items>
